@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Geist", sans-serif;
+  overflow-x: hidden;
+}
+
+@theme {
+  --font-geist: "Geist", sans-serif;
+
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  --background-image-day: url("https://images.pexels.com/photos/4128298/pexels-photo-4128298.jpeg");
+  --background-image-night: url("https://images.pexels.com/photos/19566205/pexels-photo-19566205.jpeg");
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bg-day {
+  background-image: var(--background-image-day);
+}
+
+.bg-night {
+  background-image: var(--background-image-night);
+}
+
+.bg-overlay {
+  background: var(--color-overlay);
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.animate-fade-in {
+  animation: var(--animate-fade-in);
+}
+
+.animate-slide-up {
+  animation: var(--animate-slide-up);
+}
